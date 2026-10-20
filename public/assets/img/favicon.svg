@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400" role="img" aria-label="mozartkugeldreherland – Bildmarke">
+<title>mozartkugeldreherland – Bildmarke</title>
+<circle cx="200" cy="200" r="198" fill="#C9A13B"/><circle cx="200" cy="200" r="186" fill="#1B2A4A"/><defs><radialGradient id="fg" cx="0.4" cy="0.3" r="0.8">
+  <stop offset="0" stop-color="#9A6640"/><stop offset="0.5" stop-color="#4A2A18"/><stop offset="1" stop-color="#22110A"/>
+</radialGradient></defs>
+<circle cx="200" cy="232" r="92" fill="url(#fg)"/>
+<ellipse cx="168.7" cy="195.2" rx="23.9" ry="13.8" transform="rotate(-35 168.7 195.2)" fill="#FFFFFF" fill-opacity="0.3"/>
+<path d="M 123.1 323.6 A 119.6 119.6 0 0 0 319.1 221.6" fill="none" stroke="#C9A13B" stroke-width="11" stroke-linecap="round"/>
+<path d="M 316.7 193.5 L 302 223.1 L 336.3 220.1 Z" fill="#C9A13B"/>
+<path d="M 142.5 130.8 L 142.5 88 L 171.2 106.8 L 200 73.8 L 228.8 106.8 L 257.5 88 L 257.5 130.8 Z" fill="#C9A13B"/>
+<rect x="142.5" y="116.1" width="115" height="14.7" fill="#C9A13B"/>
+<rect x="142.5" y="116.1" width="115" height="14.7" fill="#000" fill-opacity="0.1"/>
+<circle cx="167.8" cy="123.4" r="4.7" fill="#7A1E2C"/>
+<circle cx="200" cy="123.4" r="4.7" fill="#7A1E2C"/>
+<circle cx="232.2" cy="123.4" r="4.7" fill="#7A1E2C"/>
+<circle cx="142.5" cy="82" r="10.1" fill="#C9A13B"/>
+<circle cx="200" cy="67.7" r="10.1" fill="#C9A13B"/>
+<circle cx="257.5" cy="82" r="10.1" fill="#C9A13B"/>
+</svg>

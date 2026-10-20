@@ -1,0 +1,20 @@
+<!--meta
+{
+  "title": "Amtsblatt | Mozartkugeldreherland",
+  "description": "Das Amtsblatt des Mozartkugeldreherlands: Neues aus der Landesverwaltung. Satire.",
+  "nav": "amtsblatt",
+  "out": "amtsblatt.html",
+  "scripts": "<script type=\"module\" src=\"/assets/blog-widget.js\"></script>"
+}
+-->
+
+<section class="seitenkopf">
+  <div class="wrap">
+    <p class="kicker kicker--hell">Amtsblatt · erscheint unregelmäßig</p>
+    <h1 class="page-title">Amtsblatt.</h1>
+    <p class="page-intro">Neues aus der Landesverwaltung. Meistens nichts – das aber gründlich.</p>
+  </div>
+</section>
+<div class="wrap block">
+  <blog-list feed="{{FEED_BLOG}}" post-url="/beitrag" page-size="9" credit="off"></blog-list>
+</div>

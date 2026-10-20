@@ -1,0 +1,105 @@
+<!--meta
+{
+  "title": "Mozartkugeldreherland – Nihil functionat, nisi globulus",
+  "description": "Amtliche Website des Mozartkugeldreherlands: ein Land, in dem nichts funktioniert – außer der Kugel. Politische Satire, ein Kunstprojekt von cleebration.",
+  "out": "index.html",
+  "canonical": "/",
+  "scripts": "<script type=\"module\" src=\"/assets/blog-widget.js\"></script>"
+}
+-->
+
+<section class="hero">
+  <div class="wrap hero__inner">
+    <p class="hero__label">Amtliche Website · Seit jeher · Aktenzeichen MKD-1/∞</p>
+    <img class="hero__siegel" src="/assets/img/mozartkugeldreherland-siegel.svg" alt="" width="220" height="220" />
+    <h1 class="hero__title"><img src="/assets/img/mozartkugeldreherland-wortmarke-dunkel.svg" alt="Mozartkugeldreherland" width="640" height="215" /></h1>
+    <p class="hero__claim">Das Land, in dem nichts funktioniert – außer der Kugel.</p>
+    <div class="hero__actions">
+      <a class="btn btn--gold" href="/akademie">Zur Landesakademie</a>
+      <a class="btn btn--ghost" href="/kundmachungen">Kundmachungen abonnieren</a>
+    </div>
+  </div>
+</section>
+
+<section class="wrap steckbrief">
+  <div class="steckbrief__kopf">
+    <p class="kicker">Amtliche Landesbeschreibung</p>
+    <h2 class="h2">Willkommen im Mozartkugeldreherland.</h2>
+    <p class="lead">Hier wird gedreht. Von Hand, in vielen Betrieben, seit Generationen. Darüber hinaus gibt es wenig zu berichten – und das berichten wir ausführlich.</p>
+  </div>
+  <dl class="akte">
+    <div><dt>Bodenschätze</dt><dd>keine</dd></div>
+    <div><dt>Exportschlager</dt><dd>die Kugel, handgedreht</dd></div>
+    <div><dt>Worauf man stolz ist</dt><dd>siehe Exportschlager</dd></div>
+    <div><dt>Wissenschaft</dt><dd>wird geprüft</dd></div>
+    <div><dt>Technologie</dt><dd>wird abgelehnt</dd></div>
+    <div><dt>Zukunft</dt><dd>nicht vorgesehen</dd></div>
+    <div><dt>Bezug zu Österreich</dt><dd>zufällig, unerwünscht, aber nicht vermeidbar</dd></div>
+    <div><dt>Staatsmotto</dt><dd><em>Nihil functionat – nisi globulus.</em><br /><small>Nichts funktioniert – außer der Kugel.</small></dd></div>
+  </dl>
+</section>
+
+<section class="wappen">
+  <div class="wrap wappen__grid">
+    <figure class="wappen__bild">
+      <picture>
+        <source type="image/webp" srcset="/assets/img/landeswappen-560.webp 560w, /assets/img/landeswappen-1000.webp 1000w" sizes="(min-width: 900px) 420px, 80vw" />
+        <img src="/assets/img/landeswappen-1000.jpg" alt="Das Landeswappen: Krone mit Kugeln, zwei Putten, ein Medaillon mit Perückenprofil, links ein Kugeldreher mit Kupferkessel, rechts ein Zuckerbäcker mit Kugeltablett, darunter das Spruchband „Nihil functionat – nisi globulus“." width="1000" height="1792" loading="lazy" />
+      </picture>
+    </figure>
+    <div class="wappen__text">
+      <p class="kicker kicker--hell">Das Landeswappen</p>
+      <h2 class="h2">Amtliche Blasonierung</h2>
+      <ol class="blason">
+        <li><strong>Die Krone.</strong> Trägt statt Edelsteinen Kugeln. Was sonst?</li>
+        <li><strong>Die zwei Putten.</strong> Halten den Vorhang. Seit 1756 ohne Pause, ohne Kollektivvertrag.</li>
+        <li><strong>Das Medaillon.</strong> Zeigt den Namenspatron im Profil. Er wurde nie gefragt.</li>
+        <li><strong>Schildhalter links.</strong> Der Kugeldreher mit dem Kupferkessel – das Rückgrat der Volkswirtschaft.</li>
+        <li><strong>Schildhalter rechts.</strong> Der Zuckerbäcker mit dem Tablett – die Exportabteilung.</li>
+        <li><strong>Das Spruchband.</strong> <em>Nihil functionat – nisi globulus.</em> Nichts funktioniert, außer der Kugel.</li>
+        <li><strong>Der Sockel.</strong> Aus Stein, schwer, unverrückbar. Wie alles hier.</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section class="wrap block">
+  <div class="band__head">
+    <div>
+      <p class="kicker">Landesakademie für Weiterbildung</p>
+      <h2 class="h2">Der Lehrplan: {{KURSANZAHL}} Lehrveranstaltungen.</h2>
+    </div>
+    <a class="textlink" href="/akademie">Gesamtes Kursprogramm →</a>
+  </div>
+  <div class="kurse kurse--drei">
+{{KURSAUSWAHL}}
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <div class="band__head">
+      <div>
+        <p class="kicker">Amtsblatt</p>
+        <h2 class="h2">Neues aus der Landesverwaltung</h2>
+      </div>
+      <a class="textlink" href="/amtsblatt">Alle Ausgaben →</a>
+    </div>
+    <blog-list feed="{{FEED_BLOG}}" post-url="/beitrag" page-size="3" credit="off"></blog-list>
+  </div>
+</section>
+
+<section class="wrap panels">
+  <div class="panel panel--nacht">
+    <p class="kicker kicker--hell">Kundmachungen</p>
+    <h2 class="panel__title">Amtliche Mitteilungen per E-Mail</h2>
+    <p>Neue Ausgaben des Amtsblatts, neue Lehrveranstaltungen, neue Devotionalien. Zustellung ohne Rückschein.</p>
+    <a class="btn btn--gold" href="/kundmachungen">Kundmachungen abonnieren</a>
+  </div>
+  <div class="panel">
+    <p class="kicker">Devotionalien</p>
+    <h2 class="panel__title">Die Landesdevotionalien</h2>
+    <p>Absolventen-Shirts der Landesakademie, das Landessiegel als Aufkleber. Für alle, die stolz sein wollen und sonst nichts finden.</p>
+    <a class="btn btn--outline" href="/devotionalien">Zu den Devotionalien</a>
+  </div>
+</section>

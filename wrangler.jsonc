@@ -1,0 +1,37 @@
+{
+  // Cloudflare Worker mit statischen Assets — Aufbau wie klangerie-site / lko-site.
+  // Angelegt 20.10.2026 (Claude, Projekt „MyProj Mozartkugeldreherland“).
+  "name": "mozartkugeldreherland-site",
+  "compatibility_date": "2026-10-14",
+  "main": "worker/index.js",
+
+  // workers.dev-Adresse: Vorschau, solange mozartkugeldreherland.at noch bei GoDaddy
+  // auf cleebration.com/mozartkugeldreherland weiterleitet.
+  "workers_dev": true,
+  "preview_urls": true,
+
+  // Die eigenen Namen – erst einkommentieren, wenn die Zone mozartkugeldreherland.at
+  // in Cloudflare aktiv ist (Nameserver bei GoDaddy umgestellt). Cloudflare legt
+  // die DNS-Einträge beim Deploy selbst an. Der Worker führt www → ohne www.
+  // "routes": [
+  //   { "pattern": "mozartkugeldreherland.at",     "custom_domain": true },
+  //   { "pattern": "www.mozartkugeldreherland.at", "custom_domain": true }
+  // ],
+
+  // Newsletter läuft über newsletter.cleebration.com (newsletter-hub) –
+  // /api/subscribe hier bleibt nur als Rückfall und braucht dann
+  //   npx wrangler secret put EMAILOCTOPUS_API_KEY / EMAILOCTOPUS_LIST_ID
+  "vars": {
+    "EMAILOCTOPUS_TAGS": "mozartkugeldreherland",
+    "EMAILOCTOPUS_API_VERSION": "v2"
+  },
+
+  "assets": {
+    "directory": "public",
+    "binding": "ASSETS",
+    "html_handling": "auto-trailing-slash",
+    "run_worker_first": true
+  },
+
+  "observability": { "enabled": true }
+}

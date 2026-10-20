@@ -1,0 +1,19 @@
+# ===========================================================================
+#  Weiterleitungen mozartkugeldreherland.at
+#
+#  EINE Quelle, ZWEI Leser (wie klangerie-site / lko-site):
+#   1. build.mjs übersetzt die 3xx-Zeilen nach worker/redirects.generated.js
+#   2. Cloudflares Asset-Schicht liest diese Datei selbst
+#   - KEINE 200-Zeilen — unter Workers Endlosschleife
+#   - die erste passende Regel gewinnt
+# ===========================================================================
+
+# --- Kurz- und Ausweichadressen ----------------------------------------------
+/blog          /amtsblatt       301
+/post/*        /amtsblatt       301
+/newsletter    /kundmachungen   301
+/shop          /devotionalien   301
+/merch         /devotionalien   301
+/weiterbildung /akademie        301
+/lehrplan      /akademie        301
+/kontakt       /impressum       301
