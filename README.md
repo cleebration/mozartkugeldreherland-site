@@ -12,7 +12,7 @@ ein kleines Node-Skript setzt die Seiten aus Bausteinen zusammen, das Amtsblatt 
 | `/akademie` | Landesakademie: 55 Lehrveranstaltungen in 5 Fakultäten | `src/data/akademie.json` |
 | `/amtsblatt` · `/beitrag?post=<slug>` | Blog („Amtsblatt“) | Blog-Hub |
 | `/kundmachungen` | Newsletter-Anmeldung | newsletter.cleebration.com, Schlüssel `mozartkugeldreherland` |
-| `/devotionalien` | Shop – Produkte „in Vorbereitung“, Platz für Shopify-Buy-Buttons | hier |
+| `/devotionalien` | Shop – Produkte „in Vorbereitung“, Links in den Spreadshop folgen | hier |
 | `/impressum` · `/datenschutz` | Medieninhaber Chris H. Leeb (cleebration) | hier |
 
 Kurzadressen (`public/_redirects`): /blog, /newsletter, /shop, /merch, /weiterbildung, /lehrplan, /kontakt.
