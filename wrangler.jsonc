@@ -13,10 +13,10 @@
   // Die eigenen Namen – erst einkommentieren, wenn die Zone mozartkugeldreherland.at
   // in Cloudflare aktiv ist (Nameserver bei GoDaddy umgestellt). Cloudflare legt
   // die DNS-Einträge beim Deploy selbst an. Der Worker führt www → ohne www.
-  // "routes": [
-  //   { "pattern": "mozartkugeldreherland.at",     "custom_domain": true },
-  //   { "pattern": "www.mozartkugeldreherland.at", "custom_domain": true }
-  // ],
+  "routes": [
+    { "pattern": "mozartkugeldreherland.at",     "custom_domain": true },
+    { "pattern": "www.mozartkugeldreherland.at", "custom_domain": true }
+  ],
 
   // Newsletter läuft über newsletter.cleebration.com (newsletter-hub) –
   // /api/subscribe hier bleibt nur als Rückfall und braucht dann
