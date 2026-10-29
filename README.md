@@ -12,6 +12,9 @@ ein kleines Node-Skript setzt die Seiten aus Bausteinen zusammen, das Amtsblatt 
 | `/akademie` | Landesakademie: 55 Lehrveranstaltungen in 5 Fakultäten | `src/data/akademie.json` |
 | `/amtsblatt` · `/beitrag?post=<slug>` | Blog („Amtsblatt“) | Blog-Hub |
 | `/kundmachungen` | Newsletter-Anmeldung | newsletter.cleebration.com, Schlüssel `mozartkugeldreherland` |
+| `/inskription?lv=<nr>` | Landesakademie: Antrag → Bearbeitung → Bescheid → Prüfung (3 Fragen/Fakultät) → Urkunde (Druck/PDF, Social-Bild 1080×1350, QR) | `public/assets/akademie-app.js`, `src/data/pruefung.json` |
+| `/urkunde#<code>` | Echtheitsprüfung – die Urkunde steckt im Link (nach #, nie am Server); veränderte Links → „Fälschung erkannt“ | `public/assets/urkunde-code.js` |
+| `/studienbuch` | gesammelte Urkunden (localStorage), Grade: 5 LV = DKD, alle Fakultäten = Mag. rer. glob., alle 55 = Dr. h. c. glob.; Titelurkunde ab DKD | dto. |
 | `/devotionalien` | Shop – Produkte „in Vorbereitung“, Links in den Spreadshop folgen | hier |
 | `/impressum` · `/datenschutz` | Medieninhaber Chris H. Leeb (cleebration) | hier |
 

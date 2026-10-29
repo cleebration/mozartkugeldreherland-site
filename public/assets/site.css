@@ -252,3 +252,110 @@ img { max-width: 100%; height: auto; }
 .site-foot__credit { margin: 1rem 0 .5rem; }
 .site-foot__credit cleebration-credit { background: var(--cl-paper); color: var(--cl-ink); padding: .45rem .7rem; }
 .site-foot p:last-child { margin-bottom: 0; color: #B9AE95; font-size: .85rem; }
+
+/* ---- Landesakademie: Inskription, Bescheid, Prüfung, Urkunde, Studienbuch (Claude, 27.10.2026) ---- */
+.seitenkopf__knoepfe { display: flex; flex-wrap: wrap; gap: .75rem; margin: 1.75rem 0 0; }
+.kurs__inskr { margin-top: auto; padding-top: .8rem; align-self: flex-start; font-family: var(--cl-font-display); font-weight: 700; color: var(--cl-red); text-decoration: none; }
+.kurs__inskr:hover { text-decoration: underline; }
+.schritte { display: flex; flex-wrap: wrap; gap: .4rem; margin: 1.75rem 0 0; padding: 0; list-style: none; counter-reset: s; font-family: var(--cl-font-mono); font-size: .75rem; letter-spacing: .06em; text-transform: uppercase; }
+.schritte li { counter-increment: s; padding: .35rem .65rem; border: 1px solid rgba(243,234,211,.35); color: #B9AE95; }
+.schritte li::before { content: counter(s) " · "; }
+.schritte li[aria-current] { background: var(--cl-gold); border-color: var(--cl-gold); color: var(--cl-nacht); }
+.akademie-app { max-width: 920px; }
+#akademie-app { scroll-margin-top: 1rem; }
+.antrag, .pruefung, .bearbeitung { background: var(--cl-surface); border: 1px solid var(--cl-border); border-top: 4px solid var(--cl-navy); padding: 1.5rem; display: grid; gap: 1rem; max-width: 640px; }
+.feld { display: grid; gap: .35rem; }
+.feld > span { font-family: var(--cl-font-mono); font-size: .78rem; letter-spacing: .06em; text-transform: uppercase; color: var(--cl-muted); }
+.feld input:not([type=checkbox]), .feld select { min-height: 48px; padding: .5rem .75rem; font: inherit; font-size: 1.05rem; color: var(--cl-ink); background: #fff; border: 1px solid var(--cl-border); border-radius: var(--cl-radius); width: 100%; }
+.feld input:focus-visible, .feld select:focus-visible, .antwort input:focus-visible { outline: 3px solid var(--cl-gold); outline-offset: 2px; }
+.feld--check { grid-template-columns: auto 1fr; align-items: start; gap: .6rem; }
+.feld--check input { width: 1.25rem; height: 1.25rem; margin-top: .2rem; }
+.feld__hinweis { margin: -.5rem 0 0; font-size: .9rem; color: var(--cl-muted); }
+.antrag__fehler { margin: 0; min-height: 1.2em; color: var(--cl-red); font-weight: 600; }
+.antrag .btn, .pruefung .btn { justify-self: start; border: 0; cursor: pointer; }
+.balken { height: 14px; background: var(--cl-band); border: 1px solid var(--cl-border); overflow: hidden; }
+.balken span { display: block; height: 100%; width: 0; background: repeating-linear-gradient(45deg, var(--cl-gold) 0 12px, var(--cl-gold-dark) 12px 24px); transition: width .4s ease; }
+.bearbeitung__text { margin: 0; font-family: var(--cl-font-display); font-style: italic; font-size: 1.25rem; color: var(--cl-navy); }
+
+.bescheid-dok { background: #fff; color: var(--cl-ink); border: 1px solid var(--cl-border); box-shadow: 6px 6px 0 var(--cl-band); padding: clamp(1.25rem, 4vw, 2.5rem); max-width: 720px; }
+.bescheid-dok__kopf { display: flex; gap: 1rem; align-items: center; border-bottom: 2px solid var(--cl-navy); padding-bottom: 1rem; }
+.bescheid-dok__kopf img { flex: 0 0 auto; width: 64px; height: 64px; }
+.bescheid-dok__stelle { margin: 0; font-family: var(--cl-font-display); font-weight: 700; color: var(--cl-navy); line-height: 1.25; }
+.bescheid-dok__az { margin: .35rem 0 0; font-family: var(--cl-font-mono); font-size: .8rem; color: var(--cl-muted); }
+.bescheid-dok__an { margin: 1.25rem 0; line-height: 1.4; }
+.bescheid-dok__titel { margin: 1rem 0; font-family: var(--cl-font-display); font-size: 2rem; letter-spacing: .2em; text-transform: uppercase; text-align: center; color: var(--cl-navy); }
+.bescheid-dok h3 { margin: 1.25rem 0 .35rem; font-family: var(--cl-font-mono); font-size: .8rem; letter-spacing: .1em; text-transform: uppercase; color: var(--cl-red); }
+.bescheid-dok p, .bescheid-dok li { line-height: 1.55; }
+.bescheid-dok__klein { font-size: .9rem; color: var(--cl-muted); }
+.bescheid-dok__fuss { display: flex; justify-content: space-between; align-items: end; gap: 1rem; margin-top: 2rem; font-size: .9rem; }
+.bescheid-dok__fuss .stempel { font-size: 1.1rem; padding: .35rem 1rem; }
+
+.urk-aktionen { display: flex; flex-wrap: wrap; gap: .6rem; margin: 1.25rem 0 0; }
+.urk-aktionen .btn { cursor: pointer; }
+.urk-aktionen .btn--outline { background: transparent; }
+.urk-meldung { min-height: 1.3em; margin: .6rem 0 0; color: var(--cl-navy); font-style: italic; }
+.urk-weiter { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: 2rem; }
+.linkknopf { background: none; border: 0; padding: 0; font: inherit; color: var(--cl-red); text-decoration: underline; cursor: pointer; }
+
+.pruefung__intro { margin: -.5rem 0 0; font-style: italic; color: var(--cl-muted); }
+.frage { margin: 0; padding: 0; border: 0; display: grid; gap: .45rem; }
+.frage legend { padding: 0; margin-bottom: .5rem; font-family: var(--cl-font-display); font-size: 1.2rem; font-weight: 700; color: var(--cl-navy); }
+.frage legend span { display: block; font-family: var(--cl-font-mono); font-size: .72rem; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; color: var(--cl-red); }
+.antwort { display: grid; grid-template-columns: auto 1fr; gap: .6rem; align-items: start; padding: .65rem .8rem; background: #fff; border: 1px solid var(--cl-border); cursor: pointer; }
+.antwort input { width: 1.15rem; height: 1.15rem; margin-top: .2rem; accent-color: var(--cl-navy); }
+.antwort:has(input:checked) { border-color: var(--cl-navy); box-shadow: inset 4px 0 0 var(--cl-gold); }
+
+.ergebnis { margin-bottom: 2rem; }
+.ergebnis__titel { margin: 0 0 1rem; font-family: var(--cl-font-display); font-size: clamp(1.8rem, 5vw, 2.6rem); color: var(--cl-navy); }
+.ergebnis__liste { margin: 0; padding-left: 1.2rem; display: grid; gap: .5rem; }
+.ergebnis__liste span { color: var(--cl-muted); }
+.ergebnis__fuss { font-style: italic; color: var(--cl-muted); }
+
+/* Urkunde – A4 quer, skaliert auf dem Bildschirm mit */
+.urkunde { container-type: inline-size; background: var(--cl-paper); padding: clamp(8px, 1.6cqi, 18px); border: 1px solid var(--cl-border); box-shadow: 8px 8px 0 var(--cl-band); }
+.urk__rahmen { position: relative; text-align: center; border: 3px double var(--cl-gold); outline: 1px solid var(--cl-gold); outline-offset: -10px; padding: clamp(1rem, 4cqi, 2.6rem) clamp(.8rem, 4cqi, 3rem) clamp(.8rem, 2.5cqi, 1.6rem);
+  background: radial-gradient(circle at 50% 45%, rgba(201,161,59,.10), transparent 60%), var(--cl-paper); }
+.urk__siegel { width: clamp(64px, 12cqi, 120px); height: auto; }
+.urk__absender { margin: .5rem 0 0; font-family: var(--cl-font-mono); font-size: clamp(.62rem, 1.5cqi, .82rem); letter-spacing: .14em; text-transform: uppercase; color: var(--cl-red); line-height: 1.5; }
+.urk__titel { margin: .3rem 0 .4rem; font-family: var(--cl-font-display); font-size: clamp(2rem, 8cqi, 4.2rem); letter-spacing: .12em; text-transform: uppercase; color: var(--cl-navy); line-height: 1; }
+.urk__klein { margin: .2rem 0; font-size: clamp(.85rem, 2cqi, 1.05rem); color: var(--cl-muted); }
+.urk__name { margin: .3rem 0 .5rem; font-family: var(--cl-font-display); font-style: italic; font-size: clamp(1.6rem, 5.5cqi, 3rem); color: var(--cl-navy); border-bottom: 1px solid var(--cl-gold); display: inline-block; padding: 0 1rem .2rem; }
+.urk__lv { margin: .3rem 0; font-family: var(--cl-font-display); font-weight: 700; font-size: clamp(1.15rem, 3.6cqi, 2rem); color: var(--cl-red); line-height: 1.2; }
+.urk__lv span { display: block; font-family: var(--cl-font-mono); font-weight: 500; font-size: .45em; letter-spacing: .12em; color: var(--cl-muted); }
+.urk__note { display: inline-flex; gap: .35rem; align-items: center; margin: .5rem 0 0; }
+.urk__note-text { margin-left: .4rem; font-family: var(--cl-font-mono); font-size: .75rem; color: var(--cl-muted); }
+.kugel { display: inline-block; width: clamp(14px, 2.6cqi, 22px); aspect-ratio: 1; border-radius: 50%; border: 2px solid var(--cl-gold); }
+.kugel--voll { background: radial-gradient(circle at 35% 30%, #8a5a3a, var(--cl-nougat) 60%); }
+.studienbuch__kugeln .kugel { width: 12px; }
+.urk__fuss { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem; align-items: end; margin-top: clamp(1rem, 3cqi, 2rem); font-size: clamp(.72rem, 1.6cqi, .9rem); }
+.urk__ort { text-align: left; line-height: 1.4; }
+.urk__unterschrift svg { width: 100%; max-width: 180px; height: auto; display: block; margin: 0 auto; }
+.urk__unterschrift span { display: block; border-top: 1px solid var(--cl-ink); padding-top: .2rem; }
+.urk__qr { justify-self: end; display: grid; justify-items: end; gap: .25rem; font-family: var(--cl-font-mono); font-size: .62rem; color: var(--cl-muted); }
+.urk__qr .qr { width: clamp(56px, 9cqi, 84px); height: auto; }
+.urk__mikro { margin: clamp(.6rem, 2cqi, 1.2rem) 0 0; font-family: var(--cl-font-mono); font-size: clamp(.5rem, 1.2cqi, .65rem); letter-spacing: .08em; color: var(--cl-muted); }
+@media (max-width: 520px) { .urk__fuss { grid-template-columns: 1fr 1fr; } .urk__ort { grid-column: 1 / -1; text-align: center; } }
+
+.pruefstelle { display: grid; gap: .4rem; justify-items: start; margin-bottom: 1.5rem; padding: 1.25rem 1.5rem; background: var(--cl-surface); border: 1px solid var(--cl-border); border-left: 6px solid var(--cl-navy); }
+.pruefstelle--echt { border-left-color: #2f6b3a; }
+.pruefstelle--echt .stempel { color: #2f6b3a; border-color: #2f6b3a; }
+.pruefstelle p { margin: 0; }
+.pruefstelle__nr { font-family: var(--cl-font-mono); font-size: .8rem; color: var(--cl-muted); }
+
+.studienbuch__kopf { background: var(--cl-surface); border: 1px solid var(--cl-border); border-top: 4px solid var(--cl-gold); padding: 1.5rem; margin-bottom: 1.5rem; }
+.studienbuch__titel { margin: 0 0 .5rem; font-family: var(--cl-font-display); font-size: clamp(1.5rem, 4vw, 2.2rem); color: var(--cl-navy); }
+.studienbuch__liste { margin: 0 0 1.5rem; padding: 0; list-style: none; display: grid; gap: .5rem; }
+.studienbuch__liste li { display: flex; flex-wrap: wrap; gap: .3rem .8rem; align-items: center; padding: .7rem .9rem; background: #fff; border: 1px solid var(--cl-border); }
+.studienbuch__liste .kurs__nr { flex-basis: 100%; margin: 0; }
+.studienbuch__liste a { font-family: var(--cl-font-display); font-weight: 700; color: var(--cl-navy); }
+.studienbuch__fuss { font-size: .9rem; color: var(--cl-muted); }
+.kundmachung-band { margin-top: 1rem; }
+
+/* Druck: nur das gewählte Dokument */
+@media print {
+  html.druckmodus body * { visibility: hidden !important; }
+  html.druckmodus .druckbar.aktiv, html.druckmodus .druckbar.aktiv * { visibility: visible !important; }
+  html.druckmodus .druckbar.aktiv { position: absolute; inset: 0 auto auto 0; width: 100%; box-shadow: none; border: 0; margin: 0; }
+  html.druckmodus { background: #fff; }
+  .druckbar { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+}

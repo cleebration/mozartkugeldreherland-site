@@ -127,6 +127,23 @@ function fontLinks() {
 
 /** Lehrplan der Landesakademie – src/data/akademie.json */
 const akademie = JSON.parse(await read(join(SRC, "data", "akademie.json")));
+const pruefung = JSON.parse(await read(join(SRC, "data", "pruefung.json")));
+
+/** Daten für Inskription/Urkunde/Studienbuch (public/assets/akademie-app.js) – Claude, 27.10.2026 */
+{
+  for (const f of akademie.fakultaeten) {
+    const fragen = pruefung[f.id];
+    if (!Array.isArray(fragen) || fragen.length !== 3) throw new Error(`pruefung.json: Fakultät ${f.id} braucht genau 3 Fragen`);
+    for (const q of fragen) if (!q.frage || q.antworten?.length !== 3) throw new Error(`pruefung.json: Frage in ${f.id} unvollständig`);
+  }
+  const daten = {
+    fakultaeten: akademie.fakultaeten.map(({ id, nr, name }) => ({ id, nr, name })),
+    kurse: akademie.kurse.map(({ nr, f, titel }) => ({ nr, f, titel })),
+    pruefung: Object.fromEntries(akademie.fakultaeten.map((f) => [f.id, pruefung[f.id]]))
+  };
+  await mkdir(join(OUT, "assets"), { recursive: true });
+  await writeFile(join(OUT, "assets", "akademie-daten.json"), JSON.stringify(daten), "utf8");
+}
 
 const globals = {
   SITE_URL: config.siteUrl,

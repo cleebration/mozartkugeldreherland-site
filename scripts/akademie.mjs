@@ -10,6 +10,7 @@ function karte(k, f) {
   <h3 class="kurs__titel">${esc(k.titel)}</h3>
   <p class="kurs__text">${esc(k.text)}</p>
   <p class="kurs__umfang">${esc(k.umfang)}</p>
+  <a class="kurs__inskr" href="/inskription?lv=${esc(k.nr)}">Inskribieren →</a>
 </article>`;
 }
 
