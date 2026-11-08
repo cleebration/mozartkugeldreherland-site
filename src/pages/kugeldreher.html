@@ -1,0 +1,21 @@
+<!--meta
+{
+  "title": "Kugeldreher – das amtliche Klickspiel | Mozartkugeldreherland",
+  "description": "Dreh Mozartkugeln, steig vom Kugelanwärter zum Ehren-Mozart auf. Das Klickspiel der Republik – kostenlos, ohne Anmeldung.",
+  "out": "kugeldreher.html"
+}
+-->
+
+<h1 class="page-title page-title--hell">Kugeldreher</h1>
+
+<div class="wrap block">
+  <p style="max-width:60ch;margin:0 auto 1.5rem;text-align:center">Amtlicher Hinweis: Die Republik braucht Kugeln. Jede gedrehte Kugel zählt. Wer fleißig dreht, wird befördert – vom Kugelanwärter bis zum Ehren-Mozart.</p>
+  <div id="spiel" style="--sp-bg:#121C33;--sp-ink:#F3EAD3;--sp-akzent:#7A1E2C;--sp-akzent2:#C9A13B;--sp-font-display:var(--cl-font-display);--sp-font-body:var(--cl-font-body)"></div>
+  <noscript><p>Für das Kugeldrehen braucht dein Browser JavaScript.</p></noscript>
+  <p style="text-align:center;margin-top:1.5rem;font-size:.9rem">Satire. Dein Spielstand bleibt nur in diesem Browser.</p>
+</div>
+
+<script type="module">
+  import { mount } from "/assets/spiele/kugeldreher.js";
+  mount(document.getElementById("spiel"));
+</script>
