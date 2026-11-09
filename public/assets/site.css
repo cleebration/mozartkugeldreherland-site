@@ -247,6 +247,8 @@ img { max-width: 100%; height: auto; }
 .site-foot__claim { margin: .75rem 0 0; font-family: var(--cl-font-display); font-style: italic; color: var(--cl-gold); }
 .site-foot__hinweis { margin: 0 0 1rem; }
 .site-foot__hinweis strong { color: var(--cl-gold); }
+.site-foot__lied { margin: 1rem 0 0; }
+.site-foot__lied a { text-decoration: underline; text-underline-offset: 3px; }
 .site-foot a { color: var(--cl-paper); text-decoration: none; line-height: 1.9; }
 .site-foot a:hover { color: var(--cl-gold); }
 .site-foot__credit { margin: 1rem 0 .5rem; }
